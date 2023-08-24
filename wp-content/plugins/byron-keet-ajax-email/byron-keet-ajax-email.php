@@ -4,6 +4,7 @@
  * Description: A plugin to send emails via AJAX.
  * Version: 1.0
  * Author: Byron Keet
+ * Text Domain: byron-keet-ajax-email
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -59,14 +60,14 @@ function email_form_shortcode() {
 	<div id="form-container">
 		<form id="email-form" class="email-form">
 			<div class="form-group">
-				<label for="subject">Subject:</label>
+				<label for="subject"><?php _e( 'Subject:', 'byron-keet-ajax-email' ); ?></label>
 				<input type="text" id="subject" name="subject">
 			</div>
 			<div class="form-group">
-				<label for="message">Message:</label>
+				<label for="message"><?php _e( 'Message:', 'byron-keet-ajax-email' ); ?></label>
 				<textarea id="message" name="message"></textarea>
 			</div>
-			<button type="submit" class="submit-button">Send Email</button>
+			<button type="submit" class="submit-button"><?php _e( 'Send Email', 'byron-keet-ajax-email' ); ?></button>
 		</form>
 	</div>
 	<?php return ob_get_clean();
