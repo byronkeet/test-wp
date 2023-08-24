@@ -55,7 +55,7 @@ function byron_keet_send_email_ajax_handler() {
 add_action('wp_ajax_send_email', 'byron_keet_send_email_ajax_handler');
 add_action('wp_ajax_nopriv_send_email', 'byron_keet_send_email_ajax_handler');
 
-function email_form_shortcode() {
+function byron_keet_email_form_shortcode() {
 	ob_start(); ?>
 	<div id="form-container">
 		<form id="email-form" class="email-form">
@@ -72,4 +72,4 @@ function email_form_shortcode() {
 	</div>
 	<?php return ob_get_clean();
 }
-add_shortcode( 'email_form', 'email_form_shortcode' );
+add_shortcode( 'email_form', 'byron_keet_email_form_shortcode' );
